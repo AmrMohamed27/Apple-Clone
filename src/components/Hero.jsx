@@ -1,8 +1,25 @@
 import { heroVideo, smallHeroVideo } from "../utils/index.js";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useEffect, useState } from "react";
 
 function Hero() {
+  const [videoSrc, setVideoSrc] = useState(
+    window.innerWidth > 768 ? heroVideo : smallHeroVideo,
+  );
+  const handleVideoSrc = () => {
+    if (window.innerWidth > 768) {
+      setVideoSrc(heroVideo);
+    } else {
+      setVideoSrc(smallHeroVideo);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleVideoSrc);
+    return () => {
+      window.removeEventListener("resize", handleVideoSrc);
+    };
+  }, []);
   useGSAP(() => {
     gsap.to("#hero-header", {
       duration: 1,
@@ -35,21 +52,13 @@ function Hero() {
         <div className="w-9/12 md:w-10/12">
           <video
             autoPlay
-            loop
             muted
-            playsInline
-            className="hidden size-full md:block"
-          >
-            <source src={heroVideo} type="video/mp4" />
-          </video>
-          <video
-            autoPlay
             loop
-            muted
-            playsInline
-            className="block size-full md:hidden"
+            playsInline={true}
+            className="size-full"
+            key={videoSrc}
           >
-            <source src={smallHeroVideo} type="video/mp4" />
+            <source src={videoSrc} type="video/mp4" />
           </video>
         </div>
       </div>
