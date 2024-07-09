@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="scrim-max-width flex w-full items-center justify-between">
       <img src={appleImg} alt="apple-logo" width={14} height={18} />
-      <div className="flex-center hidden sm:flex">
+      <div className="hidden md:flex">
         <ul className="flex-center flex-row gap-10">
           {navLists.map((item, index) => (
             <li
