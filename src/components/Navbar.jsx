@@ -10,7 +10,7 @@ function Navbar() {
           {navLists.map((item, index) => (
             <li
               key={index}
-              className="cursor-pointer text-sm text-theme-gray hover:text-white"
+              className="cursor-pointer text-sm text-theme-gray transition-all duration-150 ease-in-out hover:text-white"
             >
               {item}
             </li>

@@ -1,4 +1,5 @@
 import Hero from "./components/Hero";
+import Highlights from "./components/Highlights";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -9,6 +10,9 @@ function App() {
       </header>
       <section className="nav-height relative w-full">
         <Hero />
+      </section>
+      <section className="common-padding bg-zinc min-h-screen w-screen">
+        <Highlights />
       </section>
     </main>
   );

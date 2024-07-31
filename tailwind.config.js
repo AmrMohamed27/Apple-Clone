@@ -7,7 +7,7 @@ export default {
         blue: "#2997ff",
         gold: "#94928d",
         "theme-gray": "#86868b",
-        "theme-gray-dark": "#101010",
+        zinc: "#101010",
         "theme-gray-button": "#262627",
         "theme-gray-icon": "#afafaf",
       },
