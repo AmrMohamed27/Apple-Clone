@@ -23,7 +23,7 @@ function Hero() {
   useGSAP(() => {
     gsap.to("#hero-header", {
       duration: 1,
-      delay: 0.6,
+      delay: 2,
       opacity: 1,
     });
     gsap.fromTo(
@@ -49,13 +49,13 @@ function Hero() {
         >
           iPhone 15 Pro
         </h2>
-        <div className="w-9/12 md:w-10/12">
+        <div className="w-[70%] md:w-10/12">
           <video
             autoPlay
             muted
             loop
             playsInline={true}
-            className="size-full"
+            className="pointer-events-none"
             key={videoSrc}
           >
             <source src={videoSrc} type="video/mp4" />

@@ -11,7 +11,7 @@ function App() {
       <section className="nav-height relative w-full">
         <Hero />
       </section>
-      <section className="common-padding bg-zinc min-h-screen w-screen">
+      <section className="common-padding min-h-screen w-screen bg-zinc">
         <Highlights />
       </section>
     </main>
