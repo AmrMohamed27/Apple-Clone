@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import Highlights from "./components/Highlights";
+import Model from "./components/Model";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
       </section>
       <section className="common-padding min-h-screen w-screen bg-zinc">
         <Highlights />
+      </section>
+      <section className="common-padding">
+        <Model />
       </section>
     </main>
   );

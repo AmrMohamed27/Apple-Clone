@@ -43,11 +43,11 @@ canvas {
   }
 
   .color-container {
-    @apply flex items-center justify-center rounded-full bg-gray-300 px-4 py-4 backdrop-blur;
+    @apply flex items-center justify-center rounded-full px-4 py-4 backdrop-blur;
   }
 
   .size-btn-container {
-    @apply ml-3 flex items-center justify-center gap-1 rounded-full bg-gray-300 p-1 backdrop-blur;
+    @apply ml-3 flex items-center justify-center gap-1 rounded-full p-1 backdrop-blur;
   }
 
   .size-btn {
@@ -59,7 +59,7 @@ canvas {
   }
 
   .section-heading {
-    @apply text-gray mb-5 translate-y-20 text-3xl font-medium opacity-0 md:text-5xl lg:mb-0 lg:text-6xl;
+    @apply mb-5 translate-y-20 text-3xl font-medium text-theme-gray opacity-0 md:text-5xl lg:mb-0 lg:text-6xl;
   }
 
   .feature-text {
