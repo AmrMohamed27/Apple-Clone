@@ -3,6 +3,8 @@ import { highlightsSlides } from "../constants/index.js";
 import { replayImg, playImg, pauseImg } from "../utils/index.js";
 import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 function VideoCarousel() {
   const videoRef = useRef([]);
@@ -100,7 +102,7 @@ function VideoCarousel() {
         gsap.ticker.remove(animUpdate);
       }
     }
-  }, [videoId, startPlay, isPlaying]);
+  }, [videoId, startPlay]);
 
   const handleProcess = (type, i) => {
     switch (type) {
