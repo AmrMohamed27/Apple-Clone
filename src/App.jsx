@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import Highlights from "./components/Highlights";
 import Model from "./components/Model";
 import Navbar from "./components/Navbar";
+import Features from "./components/Features";
 import * as Sentry from "@sentry/react";
 
 function App() {
@@ -19,6 +20,10 @@ function App() {
       <section className="common-padding">
         <Model />
       </section>
+      <section className="common-padding relative min-h-screen w-screen bg-zinc">
+        <Features />
+      </section>
+      <section className="common-padding min-h-screen"></section>
     </main>
   );
 }
