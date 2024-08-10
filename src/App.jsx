@@ -4,6 +4,8 @@ import Model from "./components/Model";
 import Navbar from "./components/Navbar";
 import Features from "./components/Features";
 import * as Sentry from "@sentry/react";
+import Gaming from "./components/Gaming";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,7 +25,12 @@ function App() {
       <section className="common-padding relative min-h-screen w-screen bg-zinc">
         <Features />
       </section>
-      <section className="common-padding min-h-screen"></section>
+      <section className="common-padding min-h-screen !pb-4">
+        <Gaming />
+      </section>
+      <section className="px-5 sm:px-10">
+        <Footer />
+      </section>
     </main>
   );
 }

@@ -62,7 +62,7 @@ function Hero() {
           </video>
         </div>
       </div>
-      <div id="hero-div" className="flex-center mb-12 flex-col gap-5">
+      <div id="hero-div" className="flex-center mb-32 flex-col gap-5 md:mb-12">
         <button className="rounded-3xl border border-transparent bg-blue px-5 py-2 hover:border-blue hover:bg-transparent hover:text-blue">
           Buy
         </button>

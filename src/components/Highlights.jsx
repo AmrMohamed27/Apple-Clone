@@ -30,17 +30,21 @@ function Highlights() {
   });
   return (
     <div className="scrim-max-width h-full">
-      <div className="flex flex-row items-end justify-between">
+      <div className="flex flex-col items-start gap-8 md:flex-row md:items-end md:justify-between">
         <h2 className="animated text-3xl font-semibold text-theme-gray sm:text-4xl md:text-6xl">
           Get the highlights.
         </h2>
         <div className="flex flex-row items-end justify-end gap-4">
           <div className="flex-center animated flex-row gap-2">
-            <p className="text-md text-blue md:text-xl">Watch the film</p>
+            <p className="text-md cursor-pointer text-blue hover:underline md:text-xl">
+              Watch the film
+            </p>
             <img src={watchImg} alt="Watch the film" width="24" height="auto" />
           </div>
           <div className="flex-center animated flex-row gap-2">
-            <p className="text-md text-blue md:text-xl">Watch the event</p>
+            <p className="text-md cursor-pointer text-blue hover:underline md:text-xl">
+              Watch the event
+            </p>
             <img src={rightImg} alt="Watch the event" width="8" height="auto" />
           </div>
         </div>

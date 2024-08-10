@@ -28,9 +28,9 @@ const Features = () => {
       },
     );
     gsap.fromTo(
-      ".animate-p",
+      ".bottom-para",
       {
-        y: 250,
+        y: 100,
         opacity: 0,
       },
       {
@@ -38,9 +38,8 @@ const Features = () => {
         opacity: 1,
         duration: 1,
         scrollTrigger: {
-          trigger: ".animate-p",
-          start: "top bottom",
-          end: "bottom top",
+          trigger: ".bottom-para",
+
           toggleActions: "restart reverse restart reverse",
         },
       },
@@ -74,18 +73,18 @@ const Features = () => {
       </div>
       {/* Secondary Header */}
       <div className="scrim-max-width mt-32 h-full pl-24 pt-12">
-        <h3 className="text-3xl font-semibold text-white sm:text-4xl md:text-7xl">
+        <h3 className="text-5xl font-semibold text-white sm:text-4xl md:text-7xl">
           iPhone.
         </h3>
-        <h3 className="text-3xl font-semibold text-white sm:text-4xl md:text-7xl">
+        <h3 className="text-5xl font-semibold text-white sm:text-4xl md:text-7xl">
           Forged in titanium.
         </h3>
       </div>
       {/* Video and images container */}
-      <div className="scrim-max-width mt-24 w-[80%] pl-8">
-        <div className="flex h-full w-[85%] flex-col items-start justify-center">
+      <div className="scrim-max-width mt-24 w-full pl-8 md:w-[80%]">
+        <div className="flex h-full w-full flex-col items-start justify-center md:w-[85%]">
           {/* Video */}
-          <div className="h-1/2 w-[calc(100%-1rem)]">
+          <div className="h-[50vh] md:h-1/2 md:w-[calc(100%-1rem)]">
             <video
               id="explore-video"
               className="h-full w-full object-cover object-center"
@@ -99,15 +98,15 @@ const Features = () => {
             </video>
           </div>
           {/* Images */}
-          <div className="flex h-1/2 w-full flex-1 flex-row items-center justify-start gap-4">
-            <div className="h-[50vh] w-[calc(50%-1rem)] overflow-hidden">
+          <div className="flex w-full flex-1 flex-col items-center justify-start gap-4 md:h-1/2 md:flex-row">
+            <div className="h-[50vh] w-full overflow-hidden md:w-[calc(50%-1rem)]">
               <img
                 className="feature-video w-full"
                 src={explore1Img}
                 alt="explore1"
               />
             </div>
-            <div className="h-[50vh] w-[calc(50%-1rem)] overflow-hidden">
+            <div className="h-[50vh] w-full overflow-hidden md:w-[calc(50%-1rem)]">
               <img
                 className="feature-video h-full"
                 src={explore2Img}
@@ -118,7 +117,7 @@ const Features = () => {
           {/* Paragraphs */}
           <div className="mt-12 flex h-1/2 w-full flex-1 flex-col items-center justify-start gap-4 md:mt-24 md:flex-row">
             <div className="relative h-full w-full md:w-[calc(50%-1rem)]">
-              <p className="animate-p text-md font-semibold text-theme-gray md:text-xl">
+              <p className="bottom-para text-md font-semibold text-theme-gray md:text-xl">
                 iPhone 15 Pro is{" "}
                 <span className="text-white">
                   the first iPhone to feature an aerospace-grade titanium
@@ -128,7 +127,7 @@ const Features = () => {
               </p>
             </div>
             <div className="relative h-full w-full md:w-[calc(50%-1rem)]">
-              <p className="animate-p text-md font-semibold text-theme-gray md:text-xl">
+              <p className="bottom-para text-md font-semibold text-theme-gray md:text-xl">
                 Titanium has one of the best strngth-to-weight ratios of any
                 metal, making these our{" "}
                 <span className="text-white">lightest Pro models ever</span>.
