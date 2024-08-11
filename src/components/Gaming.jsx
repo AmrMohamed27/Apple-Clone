@@ -1,11 +1,55 @@
 import React from "react";
 import { chipImg, frameImg, frameVideo } from "../utils";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+import { animateWithGsap } from "../utils/animations";
+gsap.registerPlugin(ScrollTrigger);
 
 function Gaming() {
+  useGSAP(() => {
+    gsap.fromTo(
+      "#chip",
+      {
+        opacity: 0,
+        scale: 1.5,
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 2,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: "#chip",
+          start: "top bottom", // When the top of the element hits the bottom of the viewport
+          end: "bottom top", // When the bottom of the element hits the top of the viewport
+          toggleActions: "play none none none", // Defines actions on enter, leave, enter back, leave back
+        },
+      },
+    );
+    gsap.fromTo(
+      "#animated-p",
+      {
+        opacity: 0,
+        y: 250,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#animated-p",
+          start: "top bottom",
+          end: "bottom top",
+          toggleActions: "play reverse play reverse",
+        },
+      },
+    );
+  }, []);
   return (
     <div className="flex-center mt-12 flex-col gap-12 md:mx-auto md:w-[75%]">
       {/* Chip Image */}
-      <div>
+      <div id="chip" className="mb-12">
         <img src={chipImg} alt="chip" width="180" height="auto" />
       </div>
       {/* Headers */}
@@ -14,11 +58,11 @@ function Gaming() {
           <h2 className="text-5xl font-semibold text-white md:text-7xl">
             A17 Pro Chip.
           </h2>
-          <h2 className="text-5xl font-semibold text-white md:text-7xl">
+          <h2 className="text-center text-5xl font-semibold text-white md:text-7xl">
             A monster win for gaming.
           </h2>
         </div>
-        <p className="text-2xl font-semibold text-theme-gray">
+        <p className="text-center text-2xl font-semibold text-theme-gray">
           It's here. The biggest redesign in the history of Apple GPUs.
         </p>
       </div>
@@ -42,7 +86,7 @@ function Gaming() {
         </div>
       </div>
       {/* Animated Paragraphs */}
-      <div className="grid grid-cols-1 gap-24 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-24 md:grid-cols-2" id="animated-p">
         <div className="flex flex-col gap-6">
           <p className="text-xl font-semibold text-theme-gray">
             A17 Pro is an entirely new class of iPhone chip that delivers our
